@@ -18,7 +18,7 @@ cd moonmoon
 Pull this repo in:
 
 ```sh
-git pull https://github.com/esroyo/moonmoon-foundation.git
+git pull https://github.com/esroyo/moonmoon-cubic.git
 ```
 
 Modify `index.php` so it defaults to `cubic` theme.
