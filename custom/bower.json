@@ -1,0 +1,31 @@
+{
+  "name": "moonmoon-foundation",
+  "version": "0.0.0",
+  "homepage": "https://github.com/esroyo/moonmoon-foundation",
+  "authors": [
+    "Carles Escrig Royo <esroyo@gmail.com>"
+  ],
+  "description": "Foundation for moonmoon.",
+  "keywords": [
+    "foundation",
+    "moonmoon",
+    "planet",
+    "feed",
+    "aggregator",
+    "responsive",
+    "rwd"
+  ],
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.5.1"
+  }
+}

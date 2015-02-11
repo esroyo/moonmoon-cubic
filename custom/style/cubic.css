@@ -1,0 +1,246 @@
+body{
+    background: #EEE;
+}
+
+a,
+#footer i.icon-moon {
+    color: #669;
+}
+
+
+a:visited{
+    color: #444;
+}
+
+a:hover{
+    color: #000;
+}
+
+/* Header
+*******************************************************************************/
+.tab-bar {
+    overflow: hidden;
+}
+.tab-bar .cubic-icon {
+  text-indent: 0.4rem;
+  width: 2.8125rem;
+  min-width: 2.8125rem;
+  height: 2.8125rem;
+  display: block;
+  padding: 0;
+  color: #FFFFFF;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+}
+.tab-bar .cubic-icon:hover {
+  cursor: pointer;
+  color: #edd400;
+}
+.cubic-icon label {
+  color: inherit;
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+.tab-bar .tab-bar-section {
+  position: static;
+  max-width: 35%;
+}
+.left-small-float {
+  height: 2.8125rem;
+  border-right: solid 1px #1a1a1a;
+  float: left;
+}
+.right-small-float {
+  height: 2.8125rem;
+  border-left: solid 1px #1a1a1a;
+  float: right;
+}
+
+header h1 a,
+header h1 a:visited {
+    color: inherit;
+}
+header h1 a:hover {
+    color: #eee;
+}
+
+/* Content
+*******************************************************************************/
+
+#content {
+    margin-top: 4rem;
+}
+
+/* Sidebar
+*******************************************************************************/
+#sidebar {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #babdb6;
+}
+
+    #sidebar a{
+        color: #ddd;
+    }
+
+    #sidebar a:visited{
+        color: #baba9b;
+    }
+
+    #sidebar a:hover{
+        color: #fff;
+    }
+
+    #sidebar hr {
+        border-color: #666;
+    }
+
+    #sidebar h2 {
+        color: #babdb6;
+    }
+    #sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 1em 0;
+    }
+
+    #sidebar a img {
+        display: none;
+    }
+
+    #sidebar a:hover i {
+        color: #edd400;
+    }
+
+/* Article
+*******************************************************************************/
+.article-original {
+    display: none;
+}
+.archive .article {
+    margin-bottom: 2rem;
+}
+.archive .article > ul {
+    margin-bottom: 0;
+}
+.archive .article,
+.article-container {
+    background: #FFF;
+    border: 1px solid #DDD;
+    transition: box-shadow 2s;
+}
+.article-container:hover {
+    box-shadow: 0 0 6px #ccc;
+    cursor: pointer;
+}
+    .mini-hero {
+        height: 10rem;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-color: #feffe8;
+        background-origin: padding-box;
+        background-position: 50% 50%;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+    .article{
+        padding: 1.5rem 2rem 2rem;
+    }
+
+    .article-title,
+    .article-title a{
+        color: #111;
+        text-decoration: none;
+        overflow: hidden;
+        max-height: 4.9rem;
+    }
+
+    .article-info {
+        margin: 0 0 2rem;
+        color: #999;
+    }
+
+    .article-excerpt {
+        overflow: hidden;
+    }
+
+    .article-excerpt .button.tiny {
+        padding: 0.325rem 0.525rem 0.3875rem;
+        margin: 0 0 0 0.5125rem;
+}
+
+/* Footer
+*******************************************************************************/
+#footer {
+    clear: both;
+    text-align: center;
+}
+
+#up {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    padding: 1.125rem 1.25rem 1.1875rem;
+    font-size: 1.5rem;
+}
+
+/* Medium screens */
+@media only screen and (min-width: 40.063em) {
+    .tab-bar .cubic-icon {
+      width: auto;
+    }
+    .mini-hero {
+        height: 12rem;
+    }
+
+    .article-title {
+        max-height: 6.5rem;
+    }
+
+    #footer {
+        padding: 1rem 2rem;
+        text-align: initial;
+    }
+
+} /* min-width 641px, medium screens */
+
+/* Large screens */
+@media only screen and (min-width: 64.063em) {
+    .tab-bar .tab-bar-section {
+        max-width: none;
+    }
+    .mini-hero {
+        height: 15rem;
+    }
+
+} /* min-width 1025px, large screens */
+
+/* body.expanded
+*******************************************************************************/
+.expanded .mini-hero,
+.expanded .article-excerpt,
+.expanded .article-modal .close-reveal-modal {
+    display: none;
+}
+.expanded .article-modal {
+    display: block !important;
+    position: static;
+    visibility: visible !important;
+    width: 100%;
+    padding: 0;
+    box-shadow: inherit;
+    border: none;
+}
+.expanded .article-container {
+    margin-bottom: 1rem;
+}
+.expanded .article-container:hover {
+    cursor: auto;
+}
+.expanded .article-title {
+    max-height: none;
+}
+
