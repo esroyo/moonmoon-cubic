@@ -145,7 +145,8 @@ header('Content-type: text/html; charset=UTF-8');
             var offset = 220,
                 duration = 600,
                 $up = $('#up').data('shown', false),
-                $body = $('body'),
+                $htmlbody = $('html, body'),
+                $body = $htmlbody.eq(1),
                 $viewMode = $('#viewMode'),
                 $viewModeIcon = $('i', $viewMode),
 		$block = $('main ul.small-block-grid-1'),
@@ -164,7 +165,7 @@ header('Content-type: text/html; charset=UTF-8');
             });
             $up.click( function(e) {
                 e.preventDefault();
-                $body.animate({scrollTop: 0}, duration);
+                $htmlbody.animate({scrollTop: 0}, duration);
                 return false;
             });
 

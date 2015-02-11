@@ -1,5 +1,5 @@
 # moonmoon-cubic
-A grid like theme for [moonmoon](http://moonmoon.org) feed agregator.
+A responsive grid theme for [moonmoon](http://moonmoon.org) feed agregator.
 
 Requirements
 ------------
