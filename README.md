@@ -21,7 +21,7 @@ Pull this repo in:
 git pull https://github.com/esroyo/moonmoon-cubic.git
 ```
 
-Modify `index.php` so it defaults to `cubic` theme.
+Modify `index.php` so it defaults to `cubic` theme:
 
 ```sh
 sed -i s/default/cubic/ index.php
