@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
 
+    // init foundation
+    $(document).foundation();
+
     var offset = 220,
         duration = 600,
         $up = $('#up'),
@@ -73,6 +76,4 @@ jQuery(document).ready(function($) {
         });
     }
 
-    // init foundation
-    $(document).foundation();
 });
