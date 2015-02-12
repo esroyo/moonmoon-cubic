@@ -7,9 +7,7 @@ Requirements
 
 Usage
 ----------
-Unzip the contents of this repo into your moonmoon base directory.
-
-Modify `index.php` so it defaults to `cubic` theme:
+Unzip the contents of this repo into your moonmoon base directory, and modify `index.php` so it defaults to `cubic` theme. For example:
 
 ```sh
 sed -i s/default/cubic/ index.php
