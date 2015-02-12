@@ -3,7 +3,7 @@ A responsive grid theme for [moonmoon](http://moonmoon.org) feed agregator.
 
 Requirements
 ------------
-* This repo is based on [moonmoon current git version](https://github.com/mauricesvay/moonmoon). It won't work with stable version (v8.12).
+* moonmoon stable version (v8.12).
 
 Usage
 ----------

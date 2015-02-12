@@ -18,8 +18,46 @@ a:hover{
 
 /* Header
 *******************************************************************************/
+.move-left > * > .inner-wrap {
+    -ms-transform: translate(-15.625rem, 0);
+    -webkit-transform: translate3d(-15.625rem, 0, 0);
+    -moz-transform: translate3d(-15.625rem, 0, 0);
+    -ms-transform: translate3d(-15.625rem, 0, 0);
+    -o-transform: translate3d(-15.625rem, 0, 0);
+    transform: translate3d(-15.625rem, 0, 0);
+}
+
 .tab-bar {
     overflow: hidden;
+}
+#viewMode.menu-icon i {
+    display: none;
+}
+.tab-bar #viewMode.menu-icon span:after {
+box-shadow: 0px 0px 0px 1px #FFF,
+0px 1px 0px 1px #FFF,
+0px 2px 0px 1px #FFF,
+0px 7px 0px 1px #FFF,
+0px 8px 0px 1px #FFF,
+0px 9px 0px 1px #FFF,
+0px 10px 0px 1px #FFF,
+0px 11px 0px 1px #FFF,
+0px 12px 0px 1px #FFF,
+0px 13px 0px 1px #FFF,
+0px 14px 0px 1px #FFF;
+}
+.tab-bar #viewMode.menu-icon:hover span:after {
+box-shadow: 0px 0px 0px 1px #edd400,
+0px 1px 0px 1px #edd400,
+0px 2px 0px 1px #edd400,
+0px 7px 0px 1px #edd400,
+0px 8px 0px 1px #edd400,
+0px 9px 0px 1px #edd400,
+0px 10px 0px 1px #edd400,
+0px 11px 0px 1px #edd400,
+0px 12px 0px 1px #edd400,
+0px 13px 0px 1px #edd400,
+0px 14px 0px 1px #edd400;
 }
 .tab-bar .cubic-icon {
   text-indent: 0.4rem;
@@ -44,7 +82,7 @@ a:hover{
 }
 .tab-bar .tab-bar-section {
   position: static;
-  max-width: 35%;
+  max-width: 2.8125rem;
 }
 .left-small-float {
   height: 2.8125rem;
@@ -62,7 +100,7 @@ header h1 a:visited {
     color: inherit;
 }
 header h1 a:hover {
-    color: #eee;
+    color: #edd400;
 }
 
 /* Content
@@ -74,11 +112,15 @@ header h1 a:hover {
 
 /* Sidebar
 *******************************************************************************/
+.sidebar,
 #sidebar {
     padding: 2rem 1rem;
     box-sizing: border-box;
     background-color: #333;
     color: #babdb6;
+}
+#sidebar {
+    height: 100vh;
 }
 
     #sidebar a{
@@ -187,6 +229,18 @@ header h1 a:hover {
     font-size: 1.5rem;
 }
 
+/* Smaller screens */
+@media only screen and (min-width: 20em) {
+    .tab-bar .tab-bar-section {
+        max-width: 25%;
+    }
+}
+/* Small screens */
+@media only screen and (min-width: 30em) {
+    .tab-bar .tab-bar-section {
+        max-width: 35%;
+    }
+}
 /* Medium screens */
 @media only screen and (min-width: 40.063em) {
     .tab-bar .cubic-icon {
@@ -220,10 +274,14 @@ header h1 a:hover {
 
 /* body.expanded
 *******************************************************************************/
+.expanded .tab-bar #viewMode.menu-icon span,
 .expanded .mini-hero,
 .expanded .article-excerpt,
 .expanded .article-modal .close-reveal-modal {
     display: none;
+}
+.expanded #viewMode.cubic-icon i {
+    display: block;
 }
 .expanded .article-modal {
     display: block !important;
@@ -243,4 +301,3 @@ header h1 a:hover {
 .expanded .article-title {
     max-height: none;
 }
-

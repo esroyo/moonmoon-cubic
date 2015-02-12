@@ -16,13 +16,16 @@ header('Content-type: text/html; charset=UTF-8');
 <body>
 
     <div class="off-canvas-wrap" data-offcanvas>
+        <div class="fixed">
+            <div class="inner-wrap">
+                <header id="header">
+                    <?php include(dirname(__FILE__).'/top.tpl.php'); ?>
+                </header>
+            </div>
+        </div>
         <div class="inner-wrap">
-
-            <header class="fixed" id="header">
-                <?php include(dirname(__FILE__).'/top.tpl.php'); ?>
-            </header>
-
             <!-- Off Canvas Menu -->
+            <aside class="right-off-canvas-menu sidebar"></aside>
             <aside class="right-off-canvas-menu" id="sidebar">
                 <?php include_once(dirname(__FILE__).'/sidebar.tpl.php'); ?>
             </aside>
@@ -137,72 +140,7 @@ header('Content-type: text/html; charset=UTF-8');
         </div><!-- .inner-wrap end -->
     </div><!-- .off-canvas-wrap end -->
 
-    <script src="custom/components/foundation/js/vendor/jquery.js"></script>
-    <script src="custom/components/foundation/js/foundation.min.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-
-            var offset = 220,
-                duration = 600,
-                $up = $('#up').data('shown', false),
-                $htmlbody = $('html, body'),
-                $body = $htmlbody.eq(1),
-                $viewMode = $('#viewMode'),
-                $viewModeIcon = $('i', $viewMode),
-		$block = $('main ul.small-block-grid-1'),
-                classStr = 'medium-block-grid-2 large-block-grid-3 xlarge-block-grid-4 xxlarge-block-grid-5';
-                
-
-            // setup scroll to top button
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > offset) {
-                    if (!$up.data('shown'))
-                        $up.data('shown', true).fadeIn(duration);
-                } else {
-                    if ($up.data('shown'))
-                        $up.data('shown', false).fadeOut(duration);
-                }
-            });
-            $up.click( function(e) {
-                e.preventDefault();
-                $htmlbody.animate({scrollTop: 0}, duration);
-                return false;
-            });
-
-            // setup clicks on th view
-            for(var i = 0; i < <?php echo $count ?>; i += 1) {
-                $('#container-' + i).click(
-                    (function(n) {
-                        return function(e) {
-                            if (!$body.hasClass('expanded') && !e.target.id.match(/^link/))
-                                $('#link-' + n).trigger('click');
-                        };
-                    }(i)))
-                .find('a[target=_blank]')
-                .click( function(e) {
-                    e.stopPropagation();
-                });
-            }
-
-            // setup view mode button
-            $viewMode.on('click', function(e) {
-                e.preventDefault();
-                if ($body.hasClass('expanded')) {
-                    $body.removeClass('expanded');
-                    $block.addClass(classStr);
-                    $viewModeIcon.attr('class', 'icon-th-list');
-                } else { 
-                    $body.addClass('expanded');
-                    $block.removeClass(classStr);
-                    $viewModeIcon.attr('class', 'icon-th');
-                }
-                return false;
-            });
-
-            // init foundation
-            $(document).foundation();
-        });
-    </script>
+    <?php include(dirname(__FILE__).'/bottom.tpl.php'); ?>
 
 </body>
 </html>

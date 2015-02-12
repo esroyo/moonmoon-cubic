@@ -41,3 +41,8 @@ function the_image_src( $str ) {
     }, $imgs));
     return $srcs[0];
 }
+
+/* future release compatibility */
+function _g($str, $comment='') {
+    return $str;
+}
