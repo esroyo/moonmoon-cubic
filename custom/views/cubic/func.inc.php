@@ -1,5 +1,25 @@
 <?php
 
+if (isset($_POST['item'])) {
+    $pos = intval($_POST['item']);
+    if (count($items) > $pos) {
+        die(preg_replace(
+            array(
+                '@<(script|style)[^>]*?>.*?</\\1>@si',
+                '@<(object|embed|iframe)[^>]*?>.*?</\\1>@si'
+            ),
+            array(
+                '',
+                '<div class="flex-video">$0</div>'
+            ),
+            $items[$pos]->get_content()
+        ));
+    } else {
+        die('Error');
+    }
+}
+
+
 /* https://developer.wordpress.org/reference/functions/wp_strip_all_tags/ */
 
 function strip_all_tags($string, $remove_breaks = false) {

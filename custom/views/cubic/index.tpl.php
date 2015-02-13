@@ -61,6 +61,7 @@ header('Content-type: text/html; charset=UTF-8');
                                     $item->get_content()
                                 );
                                 $title = strip_tags( $item->get_title() );
+                                $excerpt = html_excerpt($content, $img ? 200 : 600, ' ...');
                                 ?>
                                 <li><div class="article-container" id="container-<?php echo $count ?>">
 
@@ -81,7 +82,7 @@ header('Content-type: text/html; charset=UTF-8');
                                                         <a href="#" data-reveal-id="content-<?php echo $count ?>" id="link-<?php echo $count ?>"  title="<?php echo $title ?>"><?php echo $title ?></a>
                                                     </h2>
 
-                                                    <?php echo html_excerpt($content, $img ? 200 : 600, ' ...') ?>
+                                                    <?php echo $excerpt ?>
                                                     <a href="<?php echo $item->get_permalink(); ?>" title="<?php echo $title ?>" class="button tiny secondary" target="_blank"><i class="icon-link"></i> <?php echo _g('Read original') ?></a>
 
                                                 </section>
@@ -105,7 +106,10 @@ header('Content-type: text/html; charset=UTF-8');
                                                         echo '<a href="'.$feed->getWebsite().'" class="source" target="_blank">'.$feed->getName().'</a>';
                                                         ?>
                                                     </section>
-                                                    <?php echo $content ?>
+                                                    <section class="article-content">
+                                                        <p><?php echo $excerpt ?></p>
+                                                        <div class="text-center"><i class="icon-spin animate-spin loading"></i></div>
+                                                    </section>
                                                     <a class="close-reveal-modal">&#215;</a>
                                                 </section>
 

@@ -99,6 +99,7 @@ header h1 a,
 header h1 a:visited {
     color: inherit;
 }
+header h1 i.logo,
 header h1 a:hover {
     color: #edd400;
 }
@@ -211,7 +212,11 @@ header h1 a:hover {
     .article-excerpt .button.tiny {
         padding: 0.325rem 0.525rem 0.3875rem;
         margin: 0 0 0 0.5125rem;
-}
+    }
+    .article-content .loading {
+        font-size: 5rem;
+        color: #aaa;
+    }
 
 /* Footer
 *******************************************************************************/

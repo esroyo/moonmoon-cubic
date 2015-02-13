@@ -1,6 +1,6 @@
                 <nav class="tab-bar">
                     <div class="left tab-bar-section">
-                        <h1><a href="<?php echo $PlanetConfig->getUrl() ?>"><i class="icon-network"></i> <?php echo $PlanetConfig->getName(); ?></a></h1>
+                        <h1><a href="<?php echo $PlanetConfig->getUrl() ?>"><i class="icon-network logo"></i> <?php echo $PlanetConfig->getName(); ?></a></h1>
                     </div>
                     <div class="right-small-float">
                         <a href="./admin/" class="cubic-icon" title="<?php echo _g('Administration')?>"><i class="icon-cog"></i></a>

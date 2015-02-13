@@ -47,20 +47,6 @@ jQuery(document).ready(function($) {
         // remove view mode
         $viewMode.parent().remove();
     } else {
-        // setup clicks on th view
-        for(var i = 0; i < $('> li', $block).length; i += 1) {
-            $('#container-' + i).click(
-                (function(n) {
-                    return function(e) {
-                        if (!$body.hasClass('expanded') && !e.target.id.match(/^link/))
-                            $('#link-' + n).trigger('click');
-                    };
-                }(i)))
-            .find('a[target=_blank]')
-            .click( function(e) {
-                e.stopPropagation();
-            });
-        }
 
         // setup view mode button
         $viewMode.on('click', function(e) {
@@ -74,6 +60,25 @@ jQuery(document).ready(function($) {
             }
             return false;
         });
+
+        // setup clicks on th view
+        for(var i = 0; i < $('> li', $block).length; i += 1) {
+            $('#container-' + i).click(
+                (function(n) {
+                    return function(e) {
+                        if (!$body.hasClass('expanded') && !e.target.id.match(/^link/))
+                            $('#link-' + n).trigger('click');
+                    };
+                }(i)))
+            .find('a[target=_blank]')
+            .click( function(e) {
+                e.stopPropagation();
+            });
+
+            // Lazy load items
+            $('#content-' + i + ' .article-content')
+                .load('index.php', { item: i });
+        }
     }
 
 });
