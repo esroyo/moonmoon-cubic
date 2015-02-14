@@ -16,7 +16,7 @@
                         </a>
                     </div>
                     <div class="right-small-float">
-                        <a href="atom.php" class="cubic-icon" title="<?php echo _g('Feed (ATOM)') ?>">
+                        <a href="?type=atom10" class="cubic-icon" title="<?php echo _g('Feed (ATOM)') ?>">
                             <i class="icon-rss"></i> <label><?php echo _g('Syndicate') ?></label>
                         </a>
                     </div>
