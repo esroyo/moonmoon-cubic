@@ -76,6 +76,7 @@ box-shadow: 0px 0px 0px 1px #edd400,
   color: #edd400;
 }
 .cubic-icon label {
+  cursor: inherit;
   color: inherit;
   display: inline-block;
   margin-right: 0.8rem;
