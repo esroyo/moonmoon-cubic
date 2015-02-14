@@ -209,6 +209,23 @@ header h1 a:hover {
     font-size: 1.5rem;
 }
 
+#footer .inline-list > li > * {
+    display: initial;
+}
+
+#footer .inline-list > ul > .divider {
+    border-bottom: medium none;
+    border-top: medium none;
+    clear: none;
+    width: 0px;
+    height: 1.7rem;
+    border-right: 1px solid #CCC;
+}
+
+.button.tiny.rss {
+    padding: 0.3rem 0.4rem 0.25rem;
+}
+
 /* Smaller screens */
 @media only screen and (min-width: 20em) {
     .tab-bar .tab-bar-section {
