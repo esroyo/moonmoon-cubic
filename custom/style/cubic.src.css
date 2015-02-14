@@ -213,7 +213,7 @@ header h1 a:hover {
     display: initial;
 }
 
-#footer .inline-list > ul > .divider {
+#footer ul.inline-list > .divider {
     border-bottom: medium none;
     border-top: medium none;
     clear: none;
