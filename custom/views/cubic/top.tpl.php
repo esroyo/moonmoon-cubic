@@ -16,11 +16,6 @@
                         </a>
                     </div>
                     <div class="right-small-float">
-                        <a href="?type=atom10" class="cubic-icon" title="<?php echo _g('Feed (ATOM)') ?>">
-                            <i class="icon-rss"></i> <label><?php echo _g('Syndicate') ?></label>
-                        </a>
-                    </div>
-                    <div class="right-small-float">
-                        <a href="#" class="cubic-icon menu-icon" id="viewMode" title="<?php echo _g('Toggle view') ?>"><i class="icon-th"></i><span></span></a>
+                        <a href="#" class="cubic-icon" id="viewMode" title="<?php echo _g('Toggle view') ?>"><i class="icon-list"></i><span></span></a>
                     </div>
                 </nav>

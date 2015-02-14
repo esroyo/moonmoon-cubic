@@ -11,8 +11,9 @@ jQuery(document).ready(function($) {
         $window = $(window),
         $offCanvas = $('#sidebar.right-off-canvas-menu'),
         $viewMode = $('#viewMode'),
+        $viewModeIcon = $('> i', $viewMode),
         $block = $('main ul.small-block-grid-1'),
-        classStr = 'medium-block-grid-2 large-block-grid-3 xlarge-block-grid-4 xxlarge-block-grid-5';
+        thClass = 'medium-block-grid-2 large-block-grid-3 xlarge-block-grid-4 xxlarge-block-grid-5';
 
     $.fn.scrollStopped = function(callback) {
         var $this = $(this), self = this;
@@ -52,11 +53,14 @@ jQuery(document).ready(function($) {
         $viewMode.on('click', function(e) {
             e.preventDefault();
             if ($body.hasClass('expanded')) {
+                // going into th view mode
                 $body.removeClass('expanded');
-                $block.addClass(classStr);
+                $block.addClass(thClass);
+                $viewModeIcon.attr('class', 'icon-list');
             } else { 
                 $body.addClass('expanded');
-                $block.removeClass(classStr);
+                $block.removeClass(thClass);
+                $viewModeIcon.attr('class', 'icon-th');
             }
             return false;
         });

@@ -1,6 +1,6 @@
 
-.icon-spin:before { content: '\e800'; } /* '' */
-.icon-dot-circled:before { content: '\e801'; } /* '' */
+.icon-dot-circled:before { content: '\e800'; } /* '' */
+.icon-spin:before { content: '\e801'; } /* '' */
 .icon-megaphone:before { content: '\e802'; } /* '' */
 .icon-rss-alt:before { content: '\e803'; } /* '' */
 .icon-rss:before { content: '\e804'; } /* '' */
@@ -17,3 +17,4 @@
 .icon-th:before { content: '\e80f'; } /* '' */
 .icon-network:before { content: '\e810'; } /* '' */
 .icon-mscs:before { content: '\e811'; } /* '' */
+.icon-list:before { content: '\e812'; } /* '' */
