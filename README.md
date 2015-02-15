@@ -15,3 +15,7 @@ sed -i s/default/cubic/ index.php
 ```
 
 You are ready to go.
+
+Demo
+----------
+This theme is being used at [moviments socials de castelló](http://castello.comparteix.net/blocs/) planet.
